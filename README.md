@@ -31,6 +31,32 @@ Standard Python gives you none of that and you add `print()` statements, redeplo
 `_sanitize()` automatically redacts fields whose name contains any of `password`, `token`, `secret`, `key`, `api_key`, `apikey`, `auth`, `credential`, `passphrase`. Matching is done on word tokens (split by `_`), not substrings, so `sort_key`, `cache_key`, `foreign_key` are redacted correctly, but `monkey`, `hockey`, `turkey` are not. Non-serializable values are `repr()`'d and truncated at 100 characters. It’s elementary in its current state, but it’s easy to make it more complete.
 
 
+### Easy example: Just wrap stuff
+
+```python
+from errorcontext import ErrorContext
+
+def charge_card(user_id: int, amount: float):
+    with ErrorContext("payment_gateway", gateway="stripe", user_id=user_id):
+        # If anything raises here, user_id and gateway are attached to
+        # the exception automatically. No try/except needed.
+        result = stripe.charge(user_id, amount)
+        return result
+```
+
+When it fails, anywhere up the call stack:
+
+```python
+try:
+    charge_card(999, 50.0)
+except Exception as e:
+    print(e._context_trail)
+    # [{'label': 'payment_gateway', 'data': {'gateway': 'stripe', 'user_id': 989}, ...}]
+```
+
+And the exception here *is* the log entry itself.
+
+
 ```
 🔴 RuntimeError: User not found in gateway
 
@@ -118,3 +144,26 @@ Each `__exit__` prepends to `_context_trail` with `insert(0, ...)`, but by the t
 **No side channels. No global state. No external systems needed**
 **Just the exception, carrying everything with it**
 **Just ErrorContext**
+
+---
+
+
+## Circuit breaker metrics
+
+```python
+from errorcontext import get_circuit_breaker, get_all_circuit_breakers
+
+# Single breaker
+cb = get_circuit_breaker("stripe_api")
+print(cb.export_metrics_json())
+
+# All breakers, useful for a /health endpoint
+for name, cb in get_all_circuit_breakers().items():
+    metrics = cb.get_metrics()
+    print(f"{name}: {metrics['state']} ({metrics['metrics']['total_calls']} calls)")
+
+# Manual reset, when you've fixed the dependency and don't want to wait
+cb.reset()
+```
+
+Work in progress... 
