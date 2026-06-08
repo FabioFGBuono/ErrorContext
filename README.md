@@ -1,4 +1,4 @@
-# ErrorContext
+# ⚠️ ErrorContext
 
 > Python stack traces tell you **where** things broke. `errorcontext` tells you **why**, with no external dependencies. No separate logging setup. No configuration files. The exception carries its own context. Always. Enjoy!
 
@@ -9,7 +9,7 @@
 
 ---
 
-## The problem
+## The problem ☕
 
 You're on call at 2am.... Your monitoring shows a `RuntimeError` in production.... The stack trace says it happened in `charge_card()`. Great. But:
 
