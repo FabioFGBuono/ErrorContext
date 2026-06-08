@@ -1,5 +1,10 @@
 # ⚠️ ErrorContext
 
+![Status](https://img.shields.io/badge/Status-Experimenting-orange)
+![Focus](https://img.shields.io/badge/Focus-Learning-blue)
+![Warning](https://img.shields.io/badge/Warning-Here_Be_Dragons-yellow)
+![Not_For_Production](https://img.shields.io/badge/Not_for_Production-red)
+
 > Python stack traces tell you **where** things broke. `errorcontext` tells you **why**, with no external dependencies. No separate logging setup. No configuration files. The exception carries its own context. Always. Enjoy!
 
 
