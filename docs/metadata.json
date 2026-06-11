@@ -1,0 +1,13 @@
+{
+  "repository": "ErrorContext",
+  "url": "https://github.com/FabioFGBuono/ErrorContext",
+  "description": "Python stack traces tell you where things broke. ErrorContext tells you why, with no external dependencies. No separate logging setup. No configuration files. The exception carries its own context. Always.",
+  "stars": 0,
+  "language": "Python",
+  "topics": [],
+  "created": "2026-06-08T14:46:30+00:00",
+  "updated": "2026-06-08T16:11:08+00:00",
+  "generated": "2026-06-11T12:50:01.866691",
+  "theme": "dual",
+  "local_path": "github_repos\\ErrorContext"
+}

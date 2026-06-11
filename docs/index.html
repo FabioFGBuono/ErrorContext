@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="it" class="theme-github">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErrorContext</title>
+
+    <!-- tema GitHub -->
+    <style id="css-github">
+/**
+ * Minified by jsDelivr using clean-css v5.3.3.
+ * Original file: /npm/github-markdown-css@5.5.1/github-markdown-dark.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+html.theme-github .markdown-body {color-scheme:dark;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0;color:#e6edf3;background-color:#0d1117;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:16px;line-height:1.5;word-wrap:break-word}
+html.theme-github .markdown-body .octicon {display:inline-block;fill:currentColor;vertical-align:text-bottom}
+html.theme-github .markdown-body h1:hover .anchor .octicon-link:before,
+html.theme-github .markdown-body h2:hover .anchor .octicon-link:before,
+html.theme-github .markdown-body h3:hover .anchor .octicon-link:before,
+html.theme-github .markdown-body h4:hover .anchor .octicon-link:before,
+html.theme-github .markdown-body h5:hover .anchor .octicon-link:before,
+html.theme-github .markdown-body h6:hover .anchor .octicon-link:before {width:16px;height:16px;content:' ';display:inline-block;background-color:currentColor;-webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>")}
+html.theme-github .markdown-body details,
+html.theme-github .markdown-body figcaption,
+html.theme-github .markdown-body figure {display:block}
+html.theme-github .markdown-body summary {display:list-item}
+html.theme-github .markdown-body [hidden] {display:none!important}
+html.theme-github .markdown-body a {background-color:transparent;color:#2f81f7;text-decoration:none}
+html.theme-github .markdown-body abbr[title] {border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}
+html.theme-github .markdown-body b,
+html.theme-github .markdown-body strong {font-weight:600}
+html.theme-github .markdown-body dfn {font-style:italic}
+html.theme-github .markdown-body h1 {margin:.67em 0;font-weight:600;padding-bottom:.3em;font-size:2em;border-bottom:1px solid #21262d}
+html.theme-github .markdown-body mark {background-color:rgba(187,128,9,.15);color:#e6edf3}
+html.theme-github .markdown-body small {font-size:90%}
+html.theme-github .markdown-body sub,
+html.theme-github .markdown-body sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+html.theme-github .markdown-body sub {bottom:-.25em}
+html.theme-github .markdown-body sup {top:-.5em}
+html.theme-github .markdown-body img {border-style:none;max-width:100%;box-sizing:content-box;background-color:#0d1117}
+html.theme-github .markdown-body code,
+html.theme-github .markdown-body kbd,
+html.theme-github .markdown-body pre,
+html.theme-github .markdown-body samp {font-family:monospace;font-size:1em}
+html.theme-github .markdown-body figure {margin:1em 40px}
+html.theme-github .markdown-body hr {box-sizing:content-box;overflow:hidden;background:0 0;border-bottom:1px solid #21262d;height:.25em;padding:0;margin:24px 0;background-color:#30363d;border:0}
+html.theme-github .markdown-body input {font:inherit;margin:0;overflow:visible;font-family:inherit;font-size:inherit;line-height:inherit}
+html.theme-github .markdown-body [type=button],
+html.theme-github .markdown-body [type=reset],
+html.theme-github .markdown-body [type=submit] {-webkit-appearance:button;appearance:button}
+html.theme-github .markdown-body [type=checkbox],
+html.theme-github .markdown-body [type=radio] {box-sizing:border-box;padding:0}
+html.theme-github .markdown-body [type=number]::-webkit-inner-spin-button,
+html.theme-github .markdown-body [type=number]::-webkit-outer-spin-button {height:auto}
+html.theme-github .markdown-body [type=search]::-webkit-search-cancel-button,
+html.theme-github .markdown-body [type=search]::-webkit-search-decoration {-webkit-appearance:none;appearance:none}
+html.theme-github .markdown-body ::-webkit-input-placeholder {color:inherit;opacity:.54}
+html.theme-github .markdown-body ::-webkit-file-upload-button {-webkit-appearance:button;appearance:button;font:inherit}
+html.theme-github .markdown-body a:hover {text-decoration:underline}
+html.theme-github .markdown-body ::placeholder {color:#6e7681;opacity:1}
+html.theme-github .markdown-body hr::before {display:table;content:""}
+html.theme-github .markdown-body hr::after {display:table;clear:both;content:""}
+html.theme-github .markdown-body table {border-spacing:0;border-collapse:collapse;display:block;width:max-content;max-width:100%;overflow:auto}
+html.theme-github .markdown-body td,
+html.theme-github .markdown-body th {padding:0}
+html.theme-github .markdown-body details summary {cursor:pointer}
+html.theme-github .markdown-body details:not([open])>:not(summary) {display:none!important}
+html.theme-github .markdown-body [role=button]:focus,
+html.theme-github .markdown-body a:focus,
+html.theme-github .markdown-body input[type=checkbox]:focus,
+html.theme-github .markdown-body input[type=radio]:focus {outline:2px solid #2f81f7;outline-offset:-2px;box-shadow:none}
+html.theme-github .markdown-body [role=button]:focus:not(:focus-visible),
+html.theme-github .markdown-body a:focus:not(:focus-visible),
+html.theme-github .markdown-body input[type=checkbox]:focus:not(:focus-visible),
+html.theme-github .markdown-body input[type=radio]:focus:not(:focus-visible) {outline:solid 1px transparent}
+html.theme-github .markdown-body [role=button]:focus-visible,
+html.theme-github .markdown-body a:focus-visible,
+html.theme-github .markdown-body input[type=checkbox]:focus-visible,
+html.theme-github .markdown-body input[type=radio]:focus-visible {outline:2px solid #2f81f7;outline-offset:-2px;box-shadow:none}
+html.theme-github .markdown-body a:not([class]):focus,
+html.theme-github .markdown-body a:not([class]):focus-visible,
+html.theme-github .markdown-body input[type=checkbox]:focus,
+html.theme-github .markdown-body input[type=checkbox]:focus-visible,
+html.theme-github .markdown-body input[type=radio]:focus,
+html.theme-github .markdown-body input[type=radio]:focus-visible {outline-offset:0}
+html.theme-github .markdown-body kbd {display:inline-block;padding:3px 5px;font:11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;line-height:10px;color:#e6edf3;vertical-align:middle;background-color:#161b22;border:solid 1px rgba(110,118,129,.4);border-bottom-color:rgba(110,118,129,.4);border-radius:6px;box-shadow:inset 0 -1px 0 rgba(110,118,129,.4)}
+html.theme-github .markdown-body h1,
+html.theme-github .markdown-body h2,
+html.theme-github .markdown-body h3,
+html.theme-github .markdown-body h4,
+html.theme-github .markdown-body h5,
+html.theme-github .markdown-body h6 {margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}
+html.theme-github .markdown-body h2 {font-weight:600;padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #21262d}
+html.theme-github .markdown-body h3 {font-weight:600;font-size:1.25em}
+html.theme-github .markdown-body h4 {font-weight:600;font-size:1em}
+html.theme-github .markdown-body h5 {font-weight:600;font-size:.875em}
+html.theme-github .markdown-body h6 {font-weight:600;font-size:.85em;color:#848d97}
+html.theme-github .markdown-body p {margin-top:0;margin-bottom:10px}
+html.theme-github .markdown-body blockquote {margin:0;padding:0 1em;color:#848d97;border-left:.25em solid #30363d}
+html.theme-github .markdown-body ol,
+html.theme-github .markdown-body ul {margin-top:0;margin-bottom:0;padding-left:2em}
+html.theme-github .markdown-body ol ol,
+html.theme-github .markdown-body ul ol {list-style-type:lower-roman}
+html.theme-github .markdown-body ol ol ol,
+html.theme-github .markdown-body ol ul ol,
+html.theme-github .markdown-body ul ol ol,
+html.theme-github .markdown-body ul ul ol {list-style-type:lower-alpha}
+html.theme-github .markdown-body dd {margin-left:0}
+html.theme-github .markdown-body code,
+html.theme-github .markdown-body samp,
+html.theme-github .markdown-body tt {font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:12px}
+html.theme-github .markdown-body pre {margin-top:0;margin-bottom:0;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:12px;word-wrap:normal}
+html.theme-github .markdown-body .octicon {display:inline-block;overflow:visible!important;vertical-align:text-bottom;fill:currentColor}
+html.theme-github .markdown-body input::-webkit-inner-spin-button,
+html.theme-github .markdown-body input::-webkit-outer-spin-button {margin:0;-webkit-appearance:none;appearance:none}
+html.theme-github .markdown-body .mr-2 {margin-right:8px!important}
+html.theme-github .markdown-body::before {display:table;content:""}
+html.theme-github .markdown-body::after {display:table;clear:both;content:""}
+html.theme-github .markdown-body>:first-child {margin-top:0!important}
+html.theme-github .markdown-body>:last-child {margin-bottom:0!important}
+html.theme-github .markdown-body a:not([href]) {color:inherit;text-decoration:none}
+html.theme-github .markdown-body .absent {color:#f85149}
+html.theme-github .markdown-body .anchor {float:left;padding-right:4px;margin-left:-20px;line-height:1}
+html.theme-github .markdown-body .anchor:focus {outline:0}
+html.theme-github .markdown-body blockquote,
+html.theme-github .markdown-body details,
+html.theme-github .markdown-body dl,
+html.theme-github .markdown-body ol,
+html.theme-github .markdown-body p,
+html.theme-github .markdown-body pre,
+html.theme-github .markdown-body table,
+html.theme-github .markdown-body ul {margin-top:0;margin-bottom:16px}
+html.theme-github .markdown-body blockquote>:first-child {margin-top:0}
+html.theme-github .markdown-body blockquote>:last-child {margin-bottom:0}
+html.theme-github .markdown-body h1 .octicon-link,
+html.theme-github .markdown-body h2 .octicon-link,
+html.theme-github .markdown-body h3 .octicon-link,
+html.theme-github .markdown-body h4 .octicon-link,
+html.theme-github .markdown-body h5 .octicon-link,
+html.theme-github .markdown-body h6 .octicon-link {color:#e6edf3;vertical-align:middle;visibility:hidden}
+html.theme-github .markdown-body h1:hover .anchor,
+html.theme-github .markdown-body h2:hover .anchor,
+html.theme-github .markdown-body h3:hover .anchor,
+html.theme-github .markdown-body h4:hover .anchor,
+html.theme-github .markdown-body h5:hover .anchor,
+html.theme-github .markdown-body h6:hover .anchor {text-decoration:none}
+html.theme-github .markdown-body h1:hover .anchor .octicon-link,
+html.theme-github .markdown-body h2:hover .anchor .octicon-link,
+html.theme-github .markdown-body h3:hover .anchor .octicon-link,
+html.theme-github .markdown-body h4:hover .anchor .octicon-link,
+html.theme-github .markdown-body h5:hover .anchor .octicon-link,
+html.theme-github .markdown-body h6:hover .anchor .octicon-link {visibility:visible}
+html.theme-github .markdown-body h1 code,
+html.theme-github .markdown-body h1 tt,
+html.theme-github .markdown-body h2 code,
+html.theme-github .markdown-body h2 tt,
+html.theme-github .markdown-body h3 code,
+html.theme-github .markdown-body h3 tt,
+html.theme-github .markdown-body h4 code,
+html.theme-github .markdown-body h4 tt,
+html.theme-github .markdown-body h5 code,
+html.theme-github .markdown-body h5 tt,
+html.theme-github .markdown-body h6 code,
+html.theme-github .markdown-body h6 tt {padding:0 .2em;font-size:inherit}
+html.theme-github .markdown-body summary h1,
+html.theme-github .markdown-body summary h2,
+html.theme-github .markdown-body summary h3,
+html.theme-github .markdown-body summary h4,
+html.theme-github .markdown-body summary h5,
+html.theme-github .markdown-body summary h6 {display:inline-block}
+html.theme-github .markdown-body summary h1 .anchor,
+html.theme-github .markdown-body summary h2 .anchor,
+html.theme-github .markdown-body summary h3 .anchor,
+html.theme-github .markdown-body summary h4 .anchor,
+html.theme-github .markdown-body summary h5 .anchor,
+html.theme-github .markdown-body summary h6 .anchor {margin-left:-40px}
+html.theme-github .markdown-body summary h1,
+html.theme-github .markdown-body summary h2 {padding-bottom:0;border-bottom:0}
+html.theme-github .markdown-body ol.no-list,
+html.theme-github .markdown-body ul.no-list {padding:0;list-style-type:none}
+html.theme-github .markdown-body ol[type="a s"] {list-style-type:lower-alpha}
+html.theme-github .markdown-body ol[type="A s"] {list-style-type:upper-alpha}
+html.theme-github .markdown-body ol[type="i s"] {list-style-type:lower-roman}
+html.theme-github .markdown-body ol[type="I s"] {list-style-type:upper-roman}
+html.theme-github .markdown-body ol[type="1"] {list-style-type:decimal}
+html.theme-github .markdown-body div>ol:not([type]) {list-style-type:decimal}
+html.theme-github .markdown-body ol ol,
+html.theme-github .markdown-body ol ul,
+html.theme-github .markdown-body ul ol,
+html.theme-github .markdown-body ul ul {margin-top:0;margin-bottom:0}
+html.theme-github .markdown-body li>p {margin-top:16px}
+html.theme-github .markdown-body li+li {margin-top:.25em}
+html.theme-github .markdown-body dl {padding:0}
+html.theme-github .markdown-body dl dt {padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}
+html.theme-github .markdown-body dl dd {padding:0 16px;margin-bottom:16px}
+html.theme-github .markdown-body table th {font-weight:600}
+html.theme-github .markdown-body table td,
+html.theme-github .markdown-body table th {padding:6px 13px;border:1px solid #30363d}
+html.theme-github .markdown-body table td>:last-child {margin-bottom:0}
+html.theme-github .markdown-body table tr {background-color:#0d1117;border-top:1px solid #21262d}
+html.theme-github .markdown-body table tr:nth-child(2n) {background-color:#161b22}
+html.theme-github .markdown-body table img {background-color:transparent}
+html.theme-github .markdown-body img[align=right] {padding-left:20px}
+html.theme-github .markdown-body img[align=left] {padding-right:20px}
+html.theme-github .markdown-body .emoji {max-width:none;vertical-align:text-top;background-color:transparent}
+html.theme-github .markdown-body span.frame {display:block;overflow:hidden}
+html.theme-github .markdown-body span.frame>span {display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #30363d}
+html.theme-github .markdown-body span.frame span img {display:block;float:left}
+html.theme-github .markdown-body span.frame span span {display:block;padding:5px 0 0;clear:both;color:#e6edf3}
+html.theme-github .markdown-body span.align-center {display:block;overflow:hidden;clear:both}
+html.theme-github .markdown-body span.align-center>span {display:block;margin:13px auto 0;overflow:hidden;text-align:center}
+html.theme-github .markdown-body span.align-center span img {margin:0 auto;text-align:center}
+html.theme-github .markdown-body span.align-right {display:block;overflow:hidden;clear:both}
+html.theme-github .markdown-body span.align-right>span {display:block;margin:13px 0 0;overflow:hidden;text-align:right}
+html.theme-github .markdown-body span.align-right span img {margin:0;text-align:right}
+html.theme-github .markdown-body span.float-left {display:block;float:left;margin-right:13px;overflow:hidden}
+html.theme-github .markdown-body span.float-left span {margin:13px 0 0}
+html.theme-github .markdown-body span.float-right {display:block;float:right;margin-left:13px;overflow:hidden}
+html.theme-github .markdown-body span.float-right>span {display:block;margin:13px auto 0;overflow:hidden;text-align:right}
+html.theme-github .markdown-body code,
+html.theme-github .markdown-body tt {padding:.2em .4em;margin:0;font-size:85%;white-space:break-spaces;background-color:rgba(110,118,129,.4);border-radius:6px}
+html.theme-github .markdown-body code br,
+html.theme-github .markdown-body tt br {display:none}
+html.theme-github .markdown-body del code {text-decoration:inherit}
+html.theme-github .markdown-body samp {font-size:85%}
+html.theme-github .markdown-body pre code {font-size:100%}
+html.theme-github .markdown-body pre>code {padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}
+html.theme-github .markdown-body .highlight {margin-bottom:16px}
+html.theme-github .markdown-body .highlight pre {margin-bottom:0;word-break:normal}
+html.theme-github .markdown-body .highlight pre,
+html.theme-github .markdown-body pre {padding:16px;overflow:auto;font-size:85%;line-height:1.45;color:#e6edf3;background-color:#161b22;border-radius:6px}
+html.theme-github .markdown-body pre code,
+html.theme-github .markdown-body pre tt {display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}
+html.theme-github .markdown-body .csv-data td,
+html.theme-github .markdown-body .csv-data th {padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}
+html.theme-github .markdown-body .csv-data .blob-num {padding:10px 8px 9px;text-align:right;background:#0d1117;border:0}
+html.theme-github .markdown-body .csv-data tr {border-top:0}
+html.theme-github .markdown-body .csv-data th {font-weight:600;background:#161b22;border-top:0}
+html.theme-github .markdown-body [data-footnote-ref]::before {content:"["}
+html.theme-github .markdown-body [data-footnote-ref]::after {content:"]"}
+html.theme-github .markdown-body .footnotes {font-size:12px;color:#848d97;border-top:1px solid #30363d}
+html.theme-github .markdown-body .footnotes ol {padding-left:16px}
+html.theme-github .markdown-body .footnotes ol ul {display:inline-block;padding-left:16px;margin-top:16px}
+html.theme-github .markdown-body .footnotes li {position:relative}
+html.theme-github .markdown-body .footnotes li:target::before {position:absolute;top:-8px;right:-8px;bottom:-8px;left:-24px;pointer-events:none;content:"";border:2px solid #1f6feb;border-radius:6px}
+html.theme-github .markdown-body .footnotes li:target {color:#e6edf3}
+html.theme-github .markdown-body .footnotes .data-footnote-backref g-emoji {font-family:monospace}
+html.theme-github .markdown-body .pl-c {color:#8b949e}
+html.theme-github .markdown-body .pl-c1,
+html.theme-github .markdown-body .pl-s .pl-v {color:#79c0ff}
+html.theme-github .markdown-body .pl-e,
+html.theme-github .markdown-body .pl-en {color:#d2a8ff}
+html.theme-github .markdown-body .pl-s .pl-s1,
+html.theme-github .markdown-body .pl-smi {color:#c9d1d9}
+html.theme-github .markdown-body .pl-ent {color:#7ee787}
+html.theme-github .markdown-body .pl-k {color:#ff7b72}
+html.theme-github .markdown-body .pl-pds,
+html.theme-github .markdown-body .pl-s,
+html.theme-github .markdown-body .pl-s .pl-pse .pl-s1,
+html.theme-github .markdown-body .pl-sr,
+html.theme-github .markdown-body .pl-sr .pl-cce,
+html.theme-github .markdown-body .pl-sr .pl-sra,
+html.theme-github .markdown-body .pl-sr .pl-sre {color:#a5d6ff}
+html.theme-github .markdown-body .pl-smw,
+html.theme-github .markdown-body .pl-v {color:#ffa657}
+html.theme-github .markdown-body .pl-bu {color:#f85149}
+html.theme-github .markdown-body .pl-ii {color:#f0f6fc;background-color:#8e1519}
+html.theme-github .markdown-body .pl-c2 {color:#f0f6fc;background-color:#b62324}
+html.theme-github .markdown-body .pl-sr .pl-cce {font-weight:700;color:#7ee787}
+html.theme-github .markdown-body .pl-ml {color:#f2cc60}
+html.theme-github .markdown-body .pl-mh,
+html.theme-github .markdown-body .pl-mh .pl-en,
+html.theme-github .markdown-body .pl-ms {font-weight:700;color:#1f6feb}
+html.theme-github .markdown-body .pl-mi {font-style:italic;color:#c9d1d9}
+html.theme-github .markdown-body .pl-mb {font-weight:700;color:#c9d1d9}
+html.theme-github .markdown-body .pl-md {color:#ffdcd7;background-color:#67060c}
+html.theme-github .markdown-body .pl-mi1 {color:#aff5b4;background-color:#033a16}
+html.theme-github .markdown-body .pl-mc {color:#ffdfb6;background-color:#5a1e02}
+html.theme-github .markdown-body .pl-mi2 {color:#c9d1d9;background-color:#1158c7}
+html.theme-github .markdown-body .pl-mdr {font-weight:700;color:#d2a8ff}
+html.theme-github .markdown-body .pl-ba {color:#8b949e}
+html.theme-github .markdown-body .pl-sg {color:#484f58}
+html.theme-github .markdown-body .pl-corl {text-decoration:underline;color:#a5d6ff}
+html.theme-github .markdown-body g-emoji {display:inline-block;min-width:1ch;font-family:"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1em;font-style:normal!important;font-weight:400;line-height:1;vertical-align:-.075em}
+html.theme-github .markdown-body g-emoji img {width:1em;height:1em}
+html.theme-github .markdown-body .task-list-item {list-style-type:none}
+html.theme-github .markdown-body .task-list-item label {font-weight:400}
+html.theme-github .markdown-body .task-list-item.enabled label {cursor:pointer}
+html.theme-github .markdown-body .task-list-item+.task-list-item {margin-top:4px}
+html.theme-github .markdown-body .task-list-item .handle {display:none}
+html.theme-github .markdown-body .task-list-item-checkbox {margin:0 .2em .25em -1.4em;vertical-align:middle}
+html.theme-github .markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {margin:0 -1.6em .25em .2em}
+html.theme-github .markdown-body .contains-task-list {position:relative}
+html.theme-github .markdown-body .contains-task-list:focus-within .task-list-item-convert-container,
+html.theme-github .markdown-body .contains-task-list:hover .task-list-item-convert-container {display:block;width:auto;height:24px;overflow:visible;clip:auto}
+html.theme-github .markdown-body ::-webkit-calendar-picker-indicator {filter:invert(50%)}
+html.theme-github .markdown-body .markdown-alert {padding:8px 16px;margin-bottom:16px;color:inherit;border-left:.25em solid #30363d}
+html.theme-github .markdown-body .markdown-alert>:first-child {margin-top:0}
+html.theme-github .markdown-body .markdown-alert>:last-child {margin-bottom:0}
+html.theme-github .markdown-body .markdown-alert .markdown-alert-title {display:flex;font-weight:500;align-items:center;line-height:1}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-note {border-left-color:#1f6feb}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {color:#2f81f7}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-important {border-left-color:#8957e5}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {color:#a371f7}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-warning {border-left-color:#9e6a03}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {color:#d29922}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-tip {border-left-color:#238636}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {color:#3fb950}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-caution {border-left-color:#da3633}
+html.theme-github .markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {color:#f85149}
+
+/*# sourceMappingURL=/sm/6363502be14987472cbedf7d05639ef708ff569c1427348acf1bb6ea28139101.map */
+
+        html.theme-github body { background:#0d1117; color:#c9d1d9; padding:32px 16px; }
+
+        html.theme-github .page-wrap { max-width:960px; margin:0 auto; }
+
+        html.theme-github .repo-header { border-bottom:1px solid #30363d; padding-bottom:24px; margin-bottom:32px; }
+
+        html.theme-github .repo-header h1 { font-size:1.8em; margin:0 0 8px; }
+
+        html.theme-github .repo-header h1 a { color:#58a6ff; text-decoration:none; }
+
+        html.theme-github .repo-header h1 a:hover { text-decoration:underline; }
+
+        html.theme-github .repo-header p { color:#8b949e; margin:4px 0; }
+
+        html.theme-github .repo-meta { font-size:.9em; color:#8b949e; margin-top:8px; }
+
+        html.theme-github .markdown-body img { max-width:100%; height:auto; border-radius:6px; }
+
+        html.theme-github .markdown-body p img { display:inline; vertical-align:middle; margin:0 2px; }
+
+        html.theme-github .badges {
+            display:flex; flex-direction:row; flex-wrap:wrap;
+            align-items:center; justify-content:flex-start;
+            gap:6px; margin:12px 0;
+        }
+
+        html.theme-github .markdown-body .badges img,
+html.theme-github .badges img {
+            height:22px; width:auto; display:inline-block !important;
+            vertical-align:middle; margin:0; border-radius:2px;
+        }
+
+        html.theme-github .file-list { background:#161b22; border:1px solid #30363d; border-radius:6px;
+            padding:16px; margin:24px 0; }
+
+        html.theme-github .file-list h3 { margin:0 0 12px; }
+
+        html.theme-github .file-list ul { list-style:none; padding:0; margin:0; }
+
+        html.theme-github .file-list li { padding:6px 0; border-bottom:1px solid #21262d; font-size:.95em; }
+
+        html.theme-github .file-list li:last-child { border-bottom:none; }
+
+        html.theme-github .file-icon { margin-right:6px; }
+
+        html.theme-github input[type="checkbox"] { margin-right:6px; accent-color:#238636; }
+
+        html.theme-github a[href$=".pdf"]::after { content:" 📕"; font-size:.8em; }
+
+        html.theme-github #hero-avatar { display:none; }
+
+        html.theme-github footer { color:#8b949e; font-size:.85em; margin-top:48px;
+            padding-top:16px; border-top:1px solid #21262d; text-align:center; }
+
+        
+    </style>
+
+    <!-- tema Custom -->
+    <style id="css-custom">
+
+        html.theme-custom {
+            --bg:#0a0e27; --bg-secondary:#111d3d; --fg:#f0f4ff;
+            --fg-secondary:#b8c5d6; --muted:#7a8fa3; --accent:#6eb3ff;
+            --accent-dark:#4a9eff; --border:#1e2d47;
+            --success:#4ade80; --warning:#fbbf24;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        html.theme-custom body {
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+                         "Helvetica Neue",Arial,sans-serif;
+            line-height:1.7; color:var(--fg);
+            background:linear-gradient(135deg,var(--bg) 0%,#0f1835 100%);
+            padding:48px 32px; max-width:900px; margin:0 auto; min-height:100vh;
+        }
+
+        html.theme-custom body::before {
+            content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+            background:linear-gradient(135deg,
+                rgba(110,179,255,0.20) 0%,rgba(110,179,255,0.10) 25%,
+                rgba(10,14,39,0.65) 70%,rgba(10,14,39,0.85) 100%);
+            mix-blend-mode:multiply; filter:blur(14px) contrast(1.02); opacity:0.98;
+        }
+
+        html.theme-custom body::after {
+            content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+            background-image:linear-gradient(transparent 50%,rgba(255,255,255,0.01) 50%);
+            background-size:100% 6px; mix-blend-mode:soft-light; opacity:0.6;
+        }
+
+        html.theme-custom body > * { position:relative; z-index:1; }
+
+        html.theme-custom .diag-accent::before {
+            content:""; position:fixed; inset:-20% -40% -20% -40%;
+            transform:rotate(-12deg); z-index:0; pointer-events:none;
+            background:linear-gradient(90deg,rgba(110,179,255,0.22),
+                rgba(110,179,255,0.08) 40%,rgba(10,14,39,0.65) 100%);
+            filter:blur(18px); mix-blend-mode:overlay; opacity:0.98;
+        }
+
+        html.theme-custom .hero { display:flex; align-items:center; justify-content:center;
+                gap:20px; margin-bottom:24px; }
+
+        html.theme-custom .avatar-round { display:block; border-radius:50%; object-fit:cover;
+            border:4px solid rgba(255,255,255,0.06);
+            box-shadow:0 8px 24px rgba(10,14,39,0.6),0 2px 6px rgba(110,179,255,0.08); }
+
+        html.theme-custom .hero-avatar { width:160px; height:160px;
+            border:5px solid rgba(110,179,255,0.12);
+            transition:transform 0.25s ease,box-shadow 0.25s ease; }
+
+        html.theme-custom .hero-avatar:hover { transform:translateY(-6px) scale(1.02);
+            box-shadow:0 18px 40px rgba(16,24,48,0.6); }
+
+        html.theme-custom h1 { font-size:2.4rem; line-height:1.2; margin-bottom:24px;
+            background:linear-gradient(135deg,var(--fg) 0%,var(--accent) 100%);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            background-clip:text; font-weight:800; letter-spacing:-0.5px; }
+
+        html.theme-custom h2 { font-size:1.8rem; margin-top:32px; margin-bottom:16px;
+            color:var(--accent); font-weight:700; letter-spacing:-0.3px;
+            text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000; }
+
+        html.theme-custom h3 { font-size:1.3rem; margin:28px 0 12px; color:var(--fg); font-weight:700; }
+
+        html.theme-custom h4,
+html.theme-custom h5,
+html.theme-custom h6 { margin:20px 0 10px; color:var(--fg-secondary); font-weight:600; }
+
+        html.theme-custom p { margin-bottom:16px; color:var(--fg-secondary); font-size:1.05rem; }
+
+        html.theme-custom strong { color:var(--fg); font-weight:700; }
+
+        html.theme-custom em { color:var(--fg-secondary); font-style:italic; }
+
+        html.theme-custom a { color:var(--accent); text-decoration:none; transition:color 0.3s ease; }
+
+        html.theme-custom a:hover { color:var(--fg); }
+
+        /* Immagini contenuto: block centrate */
+        html.theme-custom article img { max-width:100%; height:auto; border-radius:6px;
+            display:block; margin:16px auto; }
+
+        /* Immagini inline dentro un paragrafo di testo */
+        html.theme-custom article p img { display:inline-block; vertical-align:middle; margin:0 2px; }
+
+        /* Badge: riga flex allineata a sinistra, DOPO article img per specificità */
+        html.theme-custom .badges {
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:flex-start;
+            gap:6px;
+            margin:12px 0;
+        }
+
+        /* Specificità (0,0,2,1) batte sia article img (0,0,0,2) che .badges img (0,0,1,1) */
+        html.theme-custom article .badges img,
+html.theme-custom .badges img {
+            height:22px;
+            width:auto;
+            display:inline-block !important;
+            vertical-align:middle;
+            margin:0;
+            border-radius:3px;
+            filter:drop-shadow(0 1px 3px rgba(0,0,0,0.25));
+            transition:transform 0.22s cubic-bezier(.2,.9,.3,1), filter 0.22s;
+            transform-origin:center;
+        }
+
+        html.theme-custom article .badges img:hover,
+html.theme-custom .badges img:hover {
+            transform:translateY(-3px) scale(1.05);
+            filter:drop-shadow(0 6px 12px rgba(110,179,255,0.22));
+        }
+
+        html.theme-custom ul,
+html.theme-custom ol { margin:16px 0 16px 24px; }
+
+        html.theme-custom li { margin-bottom:10px; color:var(--fg-secondary); }
+
+        html.theme-custom blockquote { font-style:italic; color:var(--muted);
+            border-left:4px solid var(--accent); padding:16px 20px;
+            background:rgba(110,179,255,0.08); border-radius:4px; margin:20px 0; }
+
+        html.theme-custom hr { border:0; border-top:2px solid var(--border); margin:40px 0; opacity:0.6; }
+
+        html.theme-custom table { width:100%; border-collapse:collapse; margin:24px 0;
+            border-radius:9px; overflow:hidden; background:var(--bg-secondary);
+            box-shadow:9px 22px 22px rgba(0,0,0,0.3); border:3px solid var(--accent); }
+
+        html.theme-custom thead { background:linear-gradient(90deg,
+            rgba(110,179,255,0.15) 0%,rgba(110,179,255,0.05) 100%); }
+
+        html.theme-custom th { padding:16px 12px; color:var(--accent); font-weight:700; text-align:left;
+            border-bottom:2px solid var(--border); font-size:0.95rem;
+            text-transform:uppercase; letter-spacing:0.5px; }
+
+        html.theme-custom td { padding:14px 12px; border-bottom:1px solid var(--border);
+            color:var(--fg-secondary); font-size:0.95rem; }
+
+        html.theme-custom tbody tr:hover { background:rgba(110,179,255,0.1); transition:background 0.2s ease; }
+
+        html.theme-custom tbody tr:last-child td { border-bottom:none; }
+
+        html.theme-custom code { font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+            font-size:0.9em; background:rgba(110,179,255,0.12);
+            border:1px solid rgba(110,179,255,0.2); border-radius:5px;
+            padding:0.2em 0.45em; color:var(--accent); }
+
+        html.theme-custom pre { background:#0b111e; border:1px solid var(--border); border-radius:8px;
+            padding:16px; overflow:auto; margin:16px 0; line-height:1.5; }
+
+        html.theme-custom pre code { background:transparent; border:none; padding:0;
+            color:#e6eef8; font-size:0.88rem; }
+
+        html.theme-custom input[type="checkbox"] { margin-right:6px; accent-color:var(--accent); }
+
+        html.theme-custom a[href$=".pdf"]::after { content:" 📕"; font-size:.8em; }
+
+        html.theme-custom .file-list { background:var(--bg-secondary); border:1px solid var(--border);
+            border-radius:8px; padding:16px; margin:24px 0; }
+
+        html.theme-custom .file-list h3 { margin:0 0 12px; }
+
+        html.theme-custom .file-list ul { list-style:none; padding:0; margin:0; }
+
+        html.theme-custom .file-list li { padding:6px 0; border-bottom:1px solid var(--border); font-size:.95em; }
+
+        html.theme-custom .file-list li:last-child { border-bottom:none; }
+
+        html.theme-custom .file-icon { margin-right:6px; }
+
+        html.theme-custom footer { margin-top:40px; color:var(--muted); font-size:0.95rem;
+            padding-top:20px; border-top:2px solid var(--border); text-align:center; }
+
+        @media (max-width:768px) {
+
+            html.theme-custom body { padding:32px 16px; }
+
+            html.theme-custom h1 { font-size:1.8rem; }
+
+            html.theme-custom h2 { font-size:1.4rem; }
+
+            html.theme-custom table { font-size:0.9rem; }
+
+            html.theme-custom td,
+html.theme-custom th { padding:10px 8px; }
+
+            html.theme-custom .hero { flex-direction:column; gap:12px; }
+
+            html.theme-custom .hero-avatar { width:100px; height:100px; }
+
+        
+}
+
+        
+    </style>
+
+    <!-- condiviso: highlighting + toggle button + transizioni -->
+    <style id="css-shared">
+
+/* --- syntax highlighting (condiviso) --- */
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #49483e }
+.highlight { background: #272822; color: #F8F8F2 }
+.highlight .c { color: #959077 } /* Comment */
+.highlight .err { color: #ED007E; background-color: #1E0010 } /* Error */
+.highlight .esc { color: #F8F8F2 } /* Escape */
+.highlight .g { color: #F8F8F2 } /* Generic */
+.highlight .k { color: #66D9EF } /* Keyword */
+.highlight .l { color: #AE81FF } /* Literal */
+.highlight .n { color: #F8F8F2 } /* Name */
+.highlight .o { color: #FF4689 } /* Operator */
+.highlight .x { color: #F8F8F2 } /* Other */
+.highlight .p { color: #F8F8F2 } /* Punctuation */
+.highlight .ch { color: #959077 } /* Comment.Hashbang */
+.highlight .cm { color: #959077 } /* Comment.Multiline */
+.highlight .cp { color: #959077 } /* Comment.Preproc */
+.highlight .cpf { color: #959077 } /* Comment.PreprocFile */
+.highlight .c1 { color: #959077 } /* Comment.Single */
+.highlight .cs { color: #959077 } /* Comment.Special */
+.highlight .gd { color: #FF4689 } /* Generic.Deleted */
+.highlight .ge { color: #F8F8F2; font-style: italic } /* Generic.Emph */
+.highlight .ges { color: #F8F8F2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #F8F8F2 } /* Generic.Error */
+.highlight .gh { color: #F8F8F2 } /* Generic.Heading */
+.highlight .gi { color: #A6E22E } /* Generic.Inserted */
+.highlight .go { color: #66D9EF } /* Generic.Output */
+.highlight .gp { color: #FF4689; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { color: #F8F8F2; font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #959077 } /* Generic.Subheading */
+.highlight .gt { color: #F8F8F2 } /* Generic.Traceback */
+.highlight .kc { color: #66D9EF } /* Keyword.Constant */
+.highlight .kd { color: #66D9EF } /* Keyword.Declaration */
+.highlight .kn { color: #FF4689 } /* Keyword.Namespace */
+.highlight .kp { color: #66D9EF } /* Keyword.Pseudo */
+.highlight .kr { color: #66D9EF } /* Keyword.Reserved */
+.highlight .kt { color: #66D9EF } /* Keyword.Type */
+.highlight .ld { color: #E6DB74 } /* Literal.Date */
+.highlight .m { color: #AE81FF } /* Literal.Number */
+.highlight .s { color: #E6DB74 } /* Literal.String */
+.highlight .na { color: #A6E22E } /* Name.Attribute */
+.highlight .nb { color: #F8F8F2 } /* Name.Builtin */
+.highlight .nc { color: #A6E22E } /* Name.Class */
+.highlight .no { color: #66D9EF } /* Name.Constant */
+.highlight .nd { color: #A6E22E } /* Name.Decorator */
+.highlight .ni { color: #F8F8F2 } /* Name.Entity */
+.highlight .ne { color: #A6E22E } /* Name.Exception */
+.highlight .nf { color: #A6E22E } /* Name.Function */
+.highlight .nl { color: #F8F8F2 } /* Name.Label */
+.highlight .nn { color: #F8F8F2 } /* Name.Namespace */
+.highlight .nx { color: #A6E22E } /* Name.Other */
+.highlight .py { color: #F8F8F2 } /* Name.Property */
+.highlight .nt { color: #FF4689 } /* Name.Tag */
+.highlight .nv { color: #F8F8F2 } /* Name.Variable */
+.highlight .ow { color: #FF4689 } /* Operator.Word */
+.highlight .pm { color: #F8F8F2 } /* Punctuation.Marker */
+.highlight .w { color: #F8F8F2 } /* Text.Whitespace */
+.highlight .mb { color: #AE81FF } /* Literal.Number.Bin */
+.highlight .mf { color: #AE81FF } /* Literal.Number.Float */
+.highlight .mh { color: #AE81FF } /* Literal.Number.Hex */
+.highlight .mi { color: #AE81FF } /* Literal.Number.Integer */
+.highlight .mo { color: #AE81FF } /* Literal.Number.Oct */
+.highlight .sa { color: #E6DB74 } /* Literal.String.Affix */
+.highlight .sb { color: #E6DB74 } /* Literal.String.Backtick */
+.highlight .sc { color: #E6DB74 } /* Literal.String.Char */
+.highlight .dl { color: #E6DB74 } /* Literal.String.Delimiter */
+.highlight .sd { color: #E6DB74 } /* Literal.String.Doc */
+.highlight .s2 { color: #E6DB74 } /* Literal.String.Double */
+.highlight .se { color: #AE81FF } /* Literal.String.Escape */
+.highlight .sh { color: #E6DB74 } /* Literal.String.Heredoc */
+.highlight .si { color: #E6DB74 } /* Literal.String.Interpol */
+.highlight .sx { color: #E6DB74 } /* Literal.String.Other */
+.highlight .sr { color: #E6DB74 } /* Literal.String.Regex */
+.highlight .s1 { color: #E6DB74 } /* Literal.String.Single */
+.highlight .ss { color: #E6DB74 } /* Literal.String.Symbol */
+.highlight .bp { color: #F8F8F2 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #A6E22E } /* Name.Function.Magic */
+.highlight .vc { color: #F8F8F2 } /* Name.Variable.Class */
+.highlight .vg { color: #F8F8F2 } /* Name.Variable.Global */
+.highlight .vi { color: #F8F8F2 } /* Name.Variable.Instance */
+.highlight .vm { color: #F8F8F2 } /* Name.Variable.Magic */
+.highlight .il { color: #AE81FF } /* Literal.Number.Integer.Long */
+
+/* --- pulsante toggle --- */
+
+        #theme-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(15,20,40,0.78);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #a0b8d0;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: transform 0.18s ease, background 0.18s ease,
+                        box-shadow 0.18s ease, color 0.18s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.45);
+            padding: 0;
+            line-height: 1;
+            user-select: none;
+            outline: none;
+        }
+        #theme-toggle:hover {
+            transform: scale(1.13);
+            background: rgba(30,40,70,0.92);
+            box-shadow: 0 4px 22px rgba(110,179,255,0.28);
+            color: #6eb3ff;
+            border-color: rgba(110,179,255,0.35);
+        }
+        #theme-toggle:active { transform: scale(0.93); }
+        #theme-toggle::after {
+            content: attr(title);
+            position: absolute;
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(10,14,39,0.92);
+            color: #b8c5d6;
+            font-size: 12px;
+            white-space: nowrap;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(110,179,255,0.18);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+        #theme-toggle:hover::after { opacity: 1; }
+        
+
+/* --- transizione body al cambio tema --- */
+body {
+    transition: background 0.35s ease, color 0.25s ease;
+}
+article, article * {
+    transition: color 0.25s ease, background-color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+    </style>
+
+    <!-- Anti-flash: imposta solo html.className prima del paint -->
+    <script>(function(){var t=localStorage.getItem('gh-readme-theme')||'github';document.documentElement.className='theme-'+t;})();</script>
+
+    
+</head>
+<body>
+    <div class="hero" id="hero-avatar" style="display:none">
+  <img src="assets/images/avatar.jpg" alt="Avatar FabioFGBuono" class="avatar-round hero-avatar" loading="lazy" width="160" height="160">
+</div>
+    <div class="page-wrap">
+        
+        <article class="markdown-body">
+<h1 id="errorcontext">⚠️ ErrorContext</h1>
+<div class="badges"><img alt="Status" src="https://img.shields.io/badge/Status-Experimenting-orange"/>
+<img alt="Focus" src="https://img.shields.io/badge/Focus-Learning-blue"/>
+<img alt="Warning" src="https://img.shields.io/badge/Warning-Here_Be_Dragons-yellow"/>
+<img alt="Not_For_Production" src="https://img.shields.io/badge/Not_for_Production-red"/></div>
+<blockquote>
+<p>Python stack traces tell you <strong>where</strong> things broke. <code>errorcontext</code> tells you <strong>why</strong>, with no external dependencies. No separate logging setup. No configuration files. The exception carries its own context. Always. Enjoy!</p>
+</blockquote>
+<p><code>errorcontext</code> let the exception accumulate its own context as it unwinds. The call stack <em>is</em> the trail. The exception <em>is</em> the log entry and no coordination is required. Obviously is a conceptual experiment in exception‑driven observability, it’s fully functional, but its main purpose is to explore what happens when the exception becomes the log.</p>
+<p><strong>Magic:</strong> It's only ~300 lines of code</p>
+<hr/>
+<h2 id="the-problem">The problem ☕</h2>
+<p>You're on call at 2am.... Your monitoring shows a <code>RuntimeError</code> in production.... The stack trace says it happened in <code>charge_card()</code>. Great. But:</p>
+<ul>
+<li>What was the <code>user_id</code>?</li>
+<li>Was this the first attempt or the third?</li>
+<li>Was the circuit breaker already degraded when this hit?</li>
+<li>Which thread was handling this request?</li>
+<li>Who am I?</li>
+<li>Where is th coffee?</li>
+</ul>
+<p>Standard Python gives you none of that and you add <code>print()</code> statements, redeploy, wait for it to happen again. It's 3 a.m. and the coffee is over...</p>
+<p><code>errorcontext</code> solves the problem! It <strong>monkey-patches the exception itself</strong>. Every context manager, every retry attempt, every circuit breaker state transition gets attached directly to the exception object as it propagates up the call stack. By the time you catch it, the exception is a fully annotated incident report.</p>
+<h2 id="sensitive-data">Sensitive data</h2>
+<p><code>_sanitize()</code> automatically redacts fields whose name contains any of <code>password</code>, <code>token</code>, <code>secret</code>, <code>key</code>, <code>api_key</code>, <code>apikey</code>, <code>auth</code>, <code>credential</code>, <code>passphrase</code>. Matching is done on word tokens (split by <code>_</code>), not substrings, so <code>sort_key</code>, <code>cache_key</code>, <code>foreign_key</code> are redacted correctly, but <code>monkey</code>, <code>hockey</code>, <code>turkey</code> are not. Non-serializable values are <code>repr()</code>'d and truncated at 100 characters. It’s elementary in its current state, but it’s easy to make it more complete.</p>
+<h3 id="easy-example-just-wrap-stuff">Easy example: Just wrap stuff</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">errorcontext</span><span class="w"> </span><span class="kn">import</span> <span class="n">ErrorContext</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">charge_card</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">ErrorContext</span><span class="p">(</span><span class="s2">"payment_gateway"</span><span class="p">,</span> <span class="n">gateway</span><span class="o">=</span><span class="s2">"stripe"</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">):</span>
+        <span class="c1"># If anything raises here, user_id and gateway are attached to</span>
+        <span class="c1"># the exception automatically. No try/except needed.</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">stripe</span><span class="o">.</span><span class="n">charge</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+<p>When it fails, anywhere up the call stack:</p>
+<div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">charge_card</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">_context_trail</span><span class="p">)</span>
+    <span class="c1"># [{'label': 'payment_gateway', 'data': {'gateway': 'stripe', 'user_id': 989}, ...}]</span>
+</pre></div>
+<p>And the exception here <em>is</em> the log entry itself.</p>
+<div class="highlight"><pre><span></span>🔴 RuntimeError: User not found in gateway
+
+📍 Context Trail (3 levels):
+ └─ payment_service.process_payment @ T140234 (2026-06-08T14:32:15)
+   • user_id = 999
+   • amount = 50.0
+   └─ payment_service.charge_card @ T140234 (2026-06-08T14:32:15)
+      • user_id = 999
+      • amount = 50.0
+      • attempt = 2
+      • breaker_state = half_open
+      └─ payment_gateway @ T140234 (2026-06-08T14:32:16)
+         • gateway = stripe
+         • user_id = 989
+</pre></div>
+<h3 id="production-logging">Production logging</h3>
+<p><code>DistributedErrorLogger</code> reads everything off the exception and formats as human-readable for your terminal, as JSON for your log aggregator, and ECS for Elastic.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">errorcontext</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistributedErrorLogger</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">DistributedErrorLogger</span><span class="p">(</span><span class="n">service_name</span><span class="o">=</span><span class="s2">"payment-service"</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">"2.1.0"</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">process_payment</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="mi">989</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mf">59.0</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+    <span class="c1"># Terminal: for you at 2am</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">pretty_print</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+    <span class="c1"># JSON: for CloudWatch, Datadog, whatever</span>
+    <span class="n">log_line</span> <span class="o">=</span> <span class="n">logger</span><span class="o">.</span><span class="n">log_to_json</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">user_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"ip"</span><span class="p">:</span> <span class="s2">"10.0.0.1"</span><span class="p">,</span> <span class="s2">"session"</span><span class="p">:</span> <span class="s2">"Zuppa_di_drago"</span><span class="p">})</span>
+
+    <span class="c1"># ECS: for Elastic stack</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log_structured</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">user_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"user_agent"</span><span class="p">:</span> <span class="s2">"mobile/3.2"</span><span class="p">})</span>
+
+    <span class="c1"># Remote: fire at your log endpoint</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log_to_remote</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s2">"https://logs.moreCoffee.AnotherCoffee/"</span><span class="p">)</span>
+</pre></div>
+<h3 id="multithreaded-systems">Multithreaded systems</h3>
+<p>Everything is thread-safe by construction and each thread has its own isolated context stack via <code>threading.local</code>. Exceptions from different threads never mix their trails.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">errorcontext</span><span class="w"> </span><span class="kn">import</span> <span class="n">ErrorContext</span><span class="p">,</span> <span class="n">DistributedErrorLogger</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">DistributedErrorLogger</span><span class="p">(</span><span class="s2">"worker-pool"</span><span class="p">,</span> <span class="s2">"1.0"</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">worker</span><span class="p">(</span><span class="n">task_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">ErrorContext</span><span class="p">(</span><span class="s2">"task"</span><span class="p">,</span> <span class="n">task_id</span><span class="o">=</span><span class="n">task_id</span><span class="p">,</span> <span class="n">worker</span><span class="o">=</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">):</span>
+        <span class="c1"># Each thread's context is completely isolated.</span>
+        <span class="c1"># If this raises, only this thread's context is in the trail.</span>
+        <span class="n">process_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>
+
+<span class="n">threads</span> <span class="o">=</span> <span class="p">[</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">worker</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</pre></div>
+<p>The <code>thread_id</code> and <code>thread_name</code> are stamped on every trail entry and on the exception itself, so you can filter your logs by thread when debugging concurrency issues.</p>
+<hr/>
+<h2 id="how-it-actually-works">How it actually works</h2>
+<p>The central trick is that <code>ErrorContext.__exit__</code> runs as the exception propagates <em>up</em> through each <code>with</code> block.</p>
+<div class="highlight"><pre><span></span>raise RuntimeError("boom")             ← exception created, no trail yet
+  └─ __exit__ of "payment_gateway"     ← inserts {'label': 'payment_gateway', ...}
+    └─ __exit__ of "charge_card"       ← inserts {'label': 'charge_card', ...} at index 0
+      └─ __exit__ of "process_payment" ← inserts at index 0 again
+        └─ your except block           ← trail is now in chronological order
+</pre></div>
+<p>Each <code>__exit__</code> prepends to <code>_context_trail</code> with <code>insert(0, ...)</code>, but by the time you catch the exception, the trail reads top-to-bottom from outermost to innermost context. The exception object is both the error <em>and</em> the incident report.</p>
+<p><strong>No side channels. No global state. No external systems needed</strong>
+<strong>Just the exception, carrying everything with it</strong>
+<strong>Just ErrorContext</strong></p>
+<hr/>
+<h2 id="circuit-breaker-metrics">Circuit breaker metrics</h2>
+<div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">errorcontext</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_circuit_breaker</span><span class="p">,</span> <span class="n">get_all_circuit_breakers</span>
+
+<span class="c1"># Single breaker</span>
+<span class="n">cb</span> <span class="o">=</span> <span class="n">get_circuit_breaker</span><span class="p">(</span><span class="s2">"stripe_api"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cb</span><span class="o">.</span><span class="n">export_metrics_json</span><span class="p">())</span>
+
+<span class="c1"># All breakers, useful for a /health endpoint</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cb</span> <span class="ow">in</span> <span class="n">get_all_circuit_breakers</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">metrics</span> <span class="o">=</span> <span class="n">cb</span><span class="o">.</span><span class="n">get_metrics</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">'state'</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">'metrics'</span><span class="p">][</span><span class="s1">'total_calls'</span><span class="p">]</span><span class="si">}</span><span class="s2"> calls)"</span><span class="p">)</span>
+
+<span class="c1"># Manual reset, when you've fixed the dependency and don't want to wait</span>
+<span class="n">cb</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</pre></div>
+<p>Work in progress... </p>
+        </article>
+        
+        <footer>Generato il 11/06/2026 12:50:01 — <a href="https://github.com/FabioFGBuono/ErrorContext" target="_blank" rel="noopener noreferrer">ErrorContext su GitHub</a></footer>
+    </div>
+
+    <!-- Toggle button -->
+    <button id="theme-toggle"
+            aria-label="Cambia tema"
+            title="Tema GitHub">&#x25D1;</button>
+
+    <!-- Script toggle: il button esiste già qui, nessun DOMContentLoaded necessario -->
+    <script>(function(){
+  var KEY    = 'gh-readme-theme';
+  var themes = ['github','custom'];
+  var icons  = {github:'\u25D1', custom:'\u2736'};
+  var labels = {github:'Tema GitHub', custom:'Tema Custom'};
+
+  function applyTheme(t) {
+    document.documentElement.className = 'theme-' + t;
+    document.body.classList.toggle('diag-accent', t === 'custom');
+    var hero = document.getElementById('hero-avatar');
+    if (hero) hero.style.display = (t === 'custom') ? 'flex' : 'none';
+    var btn  = document.getElementById('theme-toggle');
+    if (btn) { btn.textContent = icons[t]; btn.title = labels[t]; }
+  }
+
+  var saved = localStorage.getItem(KEY) || 'github';
+  applyTheme(saved);
+
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.addEventListener('click', function() {
+      var cur  = document.documentElement.className.replace('theme-', '');
+      var next = themes[(themes.indexOf(cur) + 1) % themes.length];
+      localStorage.setItem(KEY, next);
+      applyTheme(next);
+    });
+  }
+})();</script>
+</body>
+</html>
