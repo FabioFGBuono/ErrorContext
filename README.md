@@ -10,7 +10,7 @@
 
 `errorcontext` let the exception accumulate its own context as it unwinds. The call stack *is* the trail. The exception *is* the log entry and no coordination is required. Obviously is a conceptual experiment in exception‑driven observability, it’s fully functional, but its main purpose is to explore what happens when the exception becomes the log.
 
-**Magic:** It's only ~300 lines of code
+**Magic:** It's only ~300 lines of code!
 
 ---
 
